@@ -47,7 +47,7 @@ requirements = python3==3.9.10,hostpython3==3.9.10,kivy,kivymd
 #presplash.filename = icon/logo_ttb.png
 
 # (str) Icon of the application
-icon.filename = icon/View.png
+#icon.filename = icon/View.png
 
 # (str) Supported orientation (one of landscape, sensorLandscape, portrait or all)
 orientation = portrait
