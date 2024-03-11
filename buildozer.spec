@@ -1,13 +1,13 @@
 [app]
 
 # (str) Title of your application
-title = View
+title = HoChua
 
 # (str) Package name
-package.name = View
+package.name = HoChua
 
 # (str) Package domain (needed for android/ios packaging)
-package.domain = org.View
+package.domain = org.HoChua
 
 # (str) Source code where the main.py live
 source.dir = .
@@ -37,17 +37,18 @@ version = 0.404
 
 # (list) Application requirements
 # comma separated e.g. requirements = sqlite3,kivy
-requirements = python3==3.9.10,hostpython3==3.9.10,kivy,kivymd,pillow,kivy_garden.graph,kivy_garden.mapview,openssl,requests,charset_normalizer,chardet,idna, urllib3,certifi,pyftpdlib,Python-IO,android,DateTime,numpy
+requirements = python3==3.9.10,hostpython3==3.9.10,Cython==0.29.33,kivy==2.2.0,kivymd,pillow,kivy_garden.mapview,kivy_garden.graph,openssl,requests,charset_normalizer,chardet,idna, urllib3,certifi,pyftpdlib,Python-IO,android,DateTime,numpy
+
 
 # (str) Custom source folders for requirements
 # Sets custom source for any requirements with recipes
 # requirements.source.kivy = ../../kivy
 
 # (str) Presplash of the application
-#presplash.filename = icon/logo_ttb.png
+#presplash.filename = %(source.dir)s/data/presplash.png
 
 # (str) Icon of the application
-#icon.filename = icon/View.png
+icon.filename = icon/songtranh2.png
 
 # (str) Supported orientation (one of landscape, sensorLandscape, portrait or all)
 orientation = portrait
@@ -68,6 +69,7 @@ osx.python_version = 3.9.10
 # Kivy version to use
 osx.kivy_version = 1.9.1
 
+
 #
 # Android specific
 #
@@ -80,7 +82,7 @@ fullscreen = 0
 # red, blue, green, black, white, gray, cyan, magenta, yellow, lightgray,
 # darkgray, grey, lightgrey, darkgrey, aqua, fuchsia, lime, maroon, navy,
 # olive, purple, silver, teal.
-android.presplash_color = white
+#android.presplash_color = #FFFFFF
 
 # (string) Presplash animation using Lottie format.
 # see https://lottiefiles.com/ for examples and https://airbnb.design/lottie/
@@ -263,7 +265,6 @@ android.logcat_filters = *:S python:D
 # (list) The Android archs to build for, choices: armeabi-v7a, arm64-v8a, x86, x86_64
 # In past, was `android.arch` as we weren't supporting builds for multiple archs at the same time.
 android.archs = arm64-v8a
-
 # (int) overrides automatic versionCode computation (used in build.gradle)
 # this is not the same as app version and should only be edited if you know what you're doing
 # android.numeric_version = 1
@@ -299,8 +300,8 @@ android.allow_backup = True
 # (str) python-for-android fork to use in case if p4a.url is not specified, defaults to upstream (kivy)
 p4a.fork = kivy
 
-# (str) python-for-android branch to use, defaults to master
-p4a.branch = master
+# (str) python-for-android branch to use, defaults to master develop
+p4a.branch =release-2022.12.20
 
 # (str) python-for-android specific commit to use, defaults to HEAD, must be within p4a.branch
 #p4a.commit = HEAD
