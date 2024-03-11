@@ -97,6 +97,7 @@ class Zoom(ScatterLayout):
         return changed
 
     def on_touch_down(self, touch):
+        print(touch)
         x, y = touch.x, touch.y
         self.prev_x = touch.x
         self.prev_y = touch.y
