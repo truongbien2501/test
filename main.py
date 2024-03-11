@@ -97,11 +97,22 @@ class Zoom(ScatterLayout):
         return changed
 
     def on_touch_down(self, touch):
-        print(touch)
+        # print(touch.profile)
+        print(touch.button)
+        # print(len(touch.get_touches()))
         x, y = touch.x, touch.y
         self.prev_x = touch.x
         self.prev_y = touch.y
-
+        if touch.button == 1:
+            # Một ngón tay đang chạm
+            print("Nhấn vào nút")
+        elif touch.button == 2:
+            # Hai ngón tay đang chạm
+            print("Nhấn hai ngón tay vào nút")
+        elif touch.button == 3:
+            # Hai ngón tay đang chạm
+            print("Nhấn ba ngón tay vào nút")
+                        
         if touch.is_mouse_scrolling:
             if touch.button == 'scrolldown':
                 print('down')
